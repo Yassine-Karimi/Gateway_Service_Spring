@@ -12,7 +12,7 @@ public class GatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
     }
-    @Bean
+    //@Bean
     RouteLocator routeLocator(RouteLocatorBuilder builder){
         return builder.routes()
                 .route((r)->r.path("/customers/**").uri("lb://CUSTOMER-SERVICE"))
